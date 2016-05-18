@@ -1,0 +1,12 @@
+﻿<ion-view title="Persons ({{persons ? persons.length : 0}})" hide-back-button="true">
+
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-icon-right" ng-repeat="p in persons" href="#/persons/{{p.Id}}">
+        {{::p.BadgeCode}} - {{::p.FirstName}} {{::p.LastName}}
+        <i class="icon icon-accessory ion-chevron-right"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-view>

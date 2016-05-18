@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <base href="/" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>PresenceMobile</title>
+
+  <!-- Stylesheets -->
+  <link href="http://code.ionicframework.com/1.0.0/css/ionic.min.css" rel="stylesheet" />
+  <link href="Client/stylesheets/app.min.css" rel="stylesheet" />
+
+  <!-- Vendor JS -->
+  <script src="http://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
+
+  <!-- App JS -->
+  <script src="Client/scripts/app.js"></script>
+  <script src="Client/scripts/controllers.js"></script>
+  <script src="Client/scripts/services.js"></script>
+</head>
+
+<body ng-app="PresenceMobile">
+
+  <ion-side-menus>
+
+    <!-- Content -->
+    <ion-pane ion-side-menu-content>
+      <!-- Default nav-bar -->
+      <ion-nav-bar>
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons side="left">
+          <button menu-toggle="left" class="button-icon icon ion-navicon hide-on-medium-up"></button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+      <ion-nav-view></ion-nav-view>
+    </ion-pane>
+
+    <!-- Side menu -->
+    <ion-side-menu side="left" expose-aside-when="large">
+      <ion-header-bar>
+        <h1 class="title">Admin</h1>
+      </ion-header-bar>
+      <ion-content>
+        <ion-list>
+          <ion-item menu-close class="item-icon-left" href="#/persons">
+            <i class="icon ion-person-stalker"></i>
+            Dipendenti
+          </ion-item>
+          <ion-item class="item-divider"></ion-item>
+          <ion-item class="item-icon-left">
+            <i class="icon ion-log-out"></i>
+            Logout
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+
+  </ion-side-menus>
+
+</body>
+</html>

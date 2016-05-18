@@ -1,0 +1,37 @@
+﻿// custom Ionic variables
+//@import "myIonicVar"
+
+// custom font
+//@import "..lib/font-awesome/font-awesome.scss
+
+// Include all of Ionic
+//@import "../lib/ionic/scss/ionic.scss";
+
+// Media Query Ranges
+@import "visiblity";
+
+// Fix for row inside items
+.list .item  .row {
+    padding: 0;
+    .col {
+        padding: 0;
+    }
+}
+
+// ion-collapsible-item
+.ion-collapsible-item {
+    // header
+    & > .ion-collapsible-item-header.activated {
+        background-color: #fff;
+    }
+    // items
+    & > .ion-collapsible-item-content > .item {
+        line-height: 30px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left:  26px;
+        border-left: none;
+        font-size: 0.9rem;
+    }
+}
+

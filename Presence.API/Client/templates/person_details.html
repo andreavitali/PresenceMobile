@@ -1,0 +1,89 @@
+﻿<ion-view title="{{::person.FirstName}} {{::person.LastName}}">
+
+  <ion-nav-bar>
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left"></ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content has-bouncing="false">
+    <div class="list">
+      <div class="item item-divider">
+        Anagraphic data
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col col-75">ID</div>
+          <div class="col text-right">{{::person.Id}}</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col col-75">Badge</div>
+          <div class="col text-right">{{::person.BadgeCode}}</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col col-75">Matricula</div>
+          <div class="col text-right">{{::person.Matricula}}</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col col-75">Pay code</div>
+          <div class="col text-right">{{::person.PayCode}}</div>
+        </div>
+      </div>
+
+      <ion-collapsible-item item-title="Service intervals">
+        <div class="item" ng-repeat="si in person.ServiceIntervals">
+          {{si.HireDate | date:'dd/MM/yyyy'}} - {{(si.QuitDate ? si.QuitDate : '&#8734;') | date:'dd/MM/yyyy'}}
+          <span class="item-note show-on-medium-up">{{si.Comment}}</span>
+        </div>
+      </ion-collapsible-item>
+
+      <div class="item item-divider">
+        Enabled terminals
+      </div>
+      <ul class="list list-inset">
+        <li class="item item-toggle">
+          Terminal#0001
+          <label class="toggle toggle-positive">
+            <input type="checkbox" checked="checked">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+        <li class="item item-toggle">
+          Terminal#0002
+          <label class="toggle toggle-positive">
+            <input type="checkbox" checked="checked">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+        <li class="item item-toggle">
+          Terminal#0003
+          <label class="toggle toggle-positive">
+            <input type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+        <li class="item item-toggle">
+          Terminal#0004
+          <label class="toggle toggle-positive">
+            <input type="checkbox" checked="checked">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+      </ul>
+
+    </div>
+  </ion-content>
+</ion-view>
